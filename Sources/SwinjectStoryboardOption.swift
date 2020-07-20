@@ -36,5 +36,9 @@ internal struct SwinjectStoryboardOption: ServiceKeyOption {
     func hash(into: inout Hasher) {
         controllerType.hash(into: &into)
     }
+    
+    func hash(into: inout Hasher) {
+        into.combine(self.controllerType)
+    }
 }
 #endif
